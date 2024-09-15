@@ -4,4 +4,4 @@ This game is meant to emulate market making conditions in interviews at top quan
 
 For now it just handles markets based on cards in a deck, however future iterations may be developed with more interesting scenarios.
 
-(Sort of buggy right now + need to implement different shift amounts)
+(was a quick hour-or-so project so its sort of buggy right now + need to implement logic for trades)
