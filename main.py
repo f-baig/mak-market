@@ -29,9 +29,9 @@ def play(num_cards):
         update_position(spread, incoming_trade)
         prompt_shift(spread)
 
-        if i % 2 == 0:
-            reveal_card(curr_card, market)
+        if (i+1) % 3 == 0:
             curr_card += 1
+            reveal_card(curr_card, market)
 
     show_PnL(market)
 
@@ -64,10 +64,10 @@ def update_position(spread, trade):
 def reveal_card(index, market):
     print("Market: ", end='')
     for i in range(index):
-        print(str(market[i]), end='')
+        print(str(market[i]), end=' ')
     for j in range(len(market) - index):
-        print(" X ")
-    print(" ")
+        print(" X ", end='')
+    print()
 
 # MARKET: 1 X X
 # MARKET: 1 10 X
