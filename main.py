@@ -129,6 +129,8 @@ def computer_play(expected_target, spread):
 
     threshold = 0.5
 
+    expected_PnL += (expected_target - lp for lp in long_positions) - (expected_target - sp for sp in short_positions)
+    
     if expected_target < spread[1] - random_noise(threshold):
         move_choice = "S"
     elif expected_target > spread[0] + random_noise(threshold):
