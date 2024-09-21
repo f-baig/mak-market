@@ -129,6 +129,8 @@ def computer_play(expected_target, spread):
 
     threshold = 0.5
 
+    # Presumably if expected PnL is high we can be more risky and increase our threshold
+    # alternatively if its low we could hedge our long and short positions in future trades
     expected_PnL += (expected_target - lp for lp in long_positions) - (expected_target - sp for sp in short_positions)
     
     if expected_target < spread[1] - random_noise(threshold):
