@@ -123,6 +123,8 @@ def computer_play(expected_target, spread):
     # Try to minimize market maker PnL by playing sell/buy to decrease market maker PnL as much as possible
     # Essentially hedge your previous trades, so keep track of previous trades (not implemented)
 
+    # To hedge our trades, we should be tracking expected PnL which is updated based on card reveals and then execute trades that way
+
     move_choice = ""
 
     threshold = 0.5
