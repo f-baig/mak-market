@@ -95,6 +95,16 @@ def shift_market(spread, direction):
         spread[1] -= 1
         spread[0] -= 1
 
+# Test to see how variance in code changes
+def shift_market_alt(spread, direction):
+    if direction == 1:
+        spread[1] += random_noise(2)
+        spread[0] += random_noise(2)
+    else:
+        spread[1] -= 2
+        spread[0] -= 2
+
+
 def random_noise(num):
     scalar = random.randrange(0,2)
     return num * scalar
