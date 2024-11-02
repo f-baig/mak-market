@@ -95,7 +95,8 @@ def shift_market(spread, direction):
         spread[1] -= 1
         spread[0] -= 1
 
-# Test to see how variance in code changes
+# Test to see how variance in market alternations and shifts
+# affects player movement
 def shift_market_alt(spread, direction):
     if direction == 1:
         spread[1] += random_noise(2)
